@@ -18,5 +18,6 @@ public class BasePresenter<V extends BaseView> extends MvpPresenter<V> {
     public void attach(V baseView) {
         super.attach(baseView);
 
+
     }
 }
