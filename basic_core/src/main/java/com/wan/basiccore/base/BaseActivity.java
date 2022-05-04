@@ -3,6 +3,8 @@ package com.wan.basiccore.base;
 import android.app.Activity;
 import android.os.Bundle;
 
+import com.wan.basiccore.mvp.MVPActivity;
+
 import androidx.annotation.Nullable;
 
 /**
@@ -14,10 +16,25 @@ import androidx.annotation.Nullable;
  * 修订历史：
  * ================================================
  */
-public  abstract class BaseActivity extends Activity {
+public  abstract class BaseActivity<P extends BasePresenter> extends MVPActivity<P> {
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+    }
+
+
+    /**
+     * 是否注册事件分发，默认不绑定
+     */
+
+    protected boolean isRegisterEventBus(){
+        return false;
+    }
+
+    @Override
+    protected void initialize() {
+        super.initialize();
+
     }
 
     @Override
