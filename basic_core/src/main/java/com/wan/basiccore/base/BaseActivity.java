@@ -1,5 +1,10 @@
 package com.wan.basiccore.base;
 
+import android.app.Activity;
+import android.os.Bundle;
+
+import androidx.annotation.Nullable;
+
 /**
  * ================================================
  * 作    者：zhanglx
@@ -9,5 +14,27 @@ package com.wan.basiccore.base;
  * 修订历史：
  * ================================================
  */
-public  abstract class BaseActivity {
+public  abstract class BaseActivity extends Activity {
+    @Override
+    protected void onCreate( Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+
+
 }
