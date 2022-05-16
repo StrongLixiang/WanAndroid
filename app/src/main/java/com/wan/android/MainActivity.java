@@ -16,13 +16,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        while (true) {
-            Log.d("zlx", "1111111111111");
-            SystemClock.sleep(3000);
-            Log.d("zlx", "22222222222");
-        }
-
-
     }
 
 
